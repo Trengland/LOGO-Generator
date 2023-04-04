@@ -1,5 +1,3 @@
-
-
 class SVG {
     constructor() {
         this.textElement = "";
@@ -20,4 +18,5 @@ class SVG {
         this.shapeElement = shape.render();
     }
 }
+
 module.exports = SVG;

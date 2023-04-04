@@ -1,4 +1,4 @@
-const SVG = require("./svg");
+const SVG = require("../../svg");
 const { Circle, Square, Triangle } = require("./shapes");
 const { writeFile } = require("fs/promises");
 
