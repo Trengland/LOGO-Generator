@@ -1,0 +1,11 @@
+{
+    "name": "logo-generator",
+    "version": "1.0.0",
+    "description": "A command line tool to generate LOGOS",
+    "main": "index.js",
+    "type": "commonjs",
+    "dependencies": {
+        "inquirer": "^8.2.5",
+        "jest": "^29.5.0"
+    }
+}
