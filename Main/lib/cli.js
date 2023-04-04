@@ -1,19 +1,18 @@
-const SVG = require("../../svg");
-const { Circle, Square, Triangle } = require("./shapes");
+const SVG = require("./svg.js");
+const { Circle, Square, Triangle } = require("./shapes.js");
 const { writeFile } = require("fs/promises");
-
-
 const inquirer = require("inquirer");
+
 class CLI {
     run() {
         inquirer.prompt([
             {
                 name: "text",
                 type: "input",
-                message: "Please choose the text for your LOGO (no more than 3 characters)",
-                validate: (text) =>
-                text.length <= 3 ||
-                "!No more than 3 characters, please!"
+                message: "Please choose the text for your LOGO (no more than 3 characters)"
+                // validate: (text) =>
+                // text.length <= 3 ||
+                // "!No more than 3 characters, please!"
             },
             {
                 name: "textColor",
@@ -32,7 +31,6 @@ class CLI {
                 message: "Please choose the color of your LOGO (shape)",
             },
         ])
-
         .then(({ text, textColor, shape: shapeType, shapeColor }) => { // Renamed 'shape' to 'shapeType'
             let chosenShape; // Renamed 'shape' to 'chosenShape'
             switch (shapeType) {
@@ -67,5 +65,7 @@ class CLI {
     }
 }
 
-const cli = new CLI();
-cli.run();
+// const cli = new CLI();
+// cli.run();
+module.exports = CLI
+

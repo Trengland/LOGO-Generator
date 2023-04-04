@@ -19,4 +19,4 @@ class SVG {
     }
 }
 
-module.exports = SVG;
+module.exports = SVG
