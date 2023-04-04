@@ -1,13 +1,12 @@
 const SVG = require("./svg");
-
 const { Circle, Square, Triangle } = require("./shapes");
-
 const { writeFile } = require("fs/promises");
 
 
+const inquirer = require("inquirer");
 class CLI {
     run() {
-        .prompt([
+        inquirer.prompt([
             {
                 name: "text",
                 type: "input",
@@ -33,34 +32,40 @@ class CLI {
                 message: "Please choose the color of your LOGO (shape)",
             },
         ])
-        .then(({ text, textColor, shape, shapeColor }) => {
-            let shape;
+
+        .then(({ text, textColor, shape: shapeType, shapeColor }) => { // Renamed 'shape' to 'shapeType'
+            let chosenShape; // Renamed 'shape' to 'chosenShape'
             switch (shapeType) {
                 case "circle":
-                    shape = new Circle();
+                    chosenShape = new Circle();
                     break;
 
                 case "square":
-                    shape = new Square();
+                    chosenShape = new Square();
                     break;
 
                 default:
-                    shape = new Triangle();
+                    chosenShape = new Triangle();
                     break;
             }
-            shape.setColor(shapeColor);
+            chosenShape.setColor(shapeColor);
 
             const svg = new SVG();
             svg.setText(text, textColor);
-            svg.setShape(shape);
+            svg.setShape(chosenShape); // Use the renamed variable 'chosenShape'
             return writeFile("logo.svg", svg.render());
         })
+
         .then(() => {
             console.log("Succesfully Generated New LOGO!");
         })
+
         .catch((error) => {
             console.log(error);
             console.log("OOPS! Something went wrong, please try again.");
         });
     }
 }
+
+const cli = new CLI();
+cli.run();
