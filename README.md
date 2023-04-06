@@ -39,7 +39,9 @@ This Project is Licensed under the MIT license.
 
 ## Contributions
 
-ChatGPT
+ChatGPT helped wiht some of the Testing code
+
+POSSIBLE FUTURE CONTRIBUTIONS = adding more characters, adding more outline styles, more css factors for multidemnsional or 3d logos
 
 
 ## Tests
