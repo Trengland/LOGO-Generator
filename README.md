@@ -15,7 +15,7 @@ It also saves money when compared to hiring a graphic designer, or paying an app
 
 * [Installation](#installation)
 * [License](#license)
-* [Future Contributions](#Future Contributions)
+* [Contributions](#contributions)
 * [Tests](#tests)
 * [Questions](#questions)
 
@@ -37,7 +37,7 @@ npm install jest
 This Project is Licensed under the MIT license.
 
 
-## Contributing
+## Contributions
 
 ChatGPT
 
