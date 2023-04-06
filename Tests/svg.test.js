@@ -1,23 +1,27 @@
+const { Circle, Square, Triangle } = require('../Main/lib/shapes');
 
+describe('Shape classes', () => {
+  describe('Circle', () => {
+    test('render returns valid SVG circle', () => {
+      const circle = new Circle();
+      circle.setColor('red');
+      expect(circle.render()).toEqual('<circle cx="150" cy="100" r="80" fill="red" />');
+    });
+  });
 
-class SVG {
-    constructor() {
-        this.textElement = "";
-        this.shapeElement = "";
-    }
-    render() {
-        return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${this.shapeElement}${this.textElement}</svg>`;
-    }
+  describe('Square', () => {
+    test('render returns valid SVG rectangle', () => {
+      const square = new Square();
+      square.setColor('blue');
+      expect(square.render()).toEqual('<rect x="90" y="40" width="120" height="120" fill="blue" />');
+    });
+  });
 
-    setText(message, color) {
-        if (message.length > 3) {
-            throw new Error("Text must not exceed 3 characters!");
-        }
-        this.textElement = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${message}</text>`;
-    }
-
-    setShape(shape) {
-        this.shapeElement = shape.render();
-    }
-}
-module.exports = SVG;
+  describe('Triangle', () => {
+    test('render returns valid SVG polygon', () => {
+      const triangle = new Triangle();
+      triangle.setColor('green');
+      expect(triangle.render()).toEqual('<polygon points="150, 18, 244, 182, 56, 182" fill="green" />');
+    });
+  });
+});
