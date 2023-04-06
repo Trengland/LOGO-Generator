@@ -15,7 +15,7 @@ It also saves money when compared to hiring a graphic designer, or paying an app
 
 * [Installation](#installation)
 * [License](#license)
-* [Contributing](#contributing)
+* [Future Contributions](#Future Contributions)
 * [Tests](#tests)
 * [Questions](#questions)
 
