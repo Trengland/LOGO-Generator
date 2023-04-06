@@ -2,7 +2,8 @@
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Screen Recording of application walk-through:
-https://www.loom.com/share/debce585d7af43ff84a089e47d7bcdbf
+
+https://www.loom.com/share/8529b77753804107897e64595a747d56
 
 
 ## Description
