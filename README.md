@@ -25,9 +25,12 @@ It also saves money when compared to hiring a graphic designer, or paying an app
 To install necessary dependencies, run the following command: 
 
 ```
-npm install
+npm i inquirer
 ```
 
+```
+npm install jest
+```
 
 ## License
     
@@ -36,7 +39,7 @@ This Project is Licensed under the MIT license.
 
 ## Contributing
 
-adding to the repo (enhance the README experience)
+ChatGPT
 
 
 ## Tests
@@ -44,7 +47,7 @@ adding to the repo (enhance the README experience)
 To perform tests, run the following command:
 
 ```
-npm test or node index
+jest
 ```
 
 
